@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;/*it is used to enable the z axis */
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;/*it is used to proove that we are using z axis*/
+    position: relative;/*position other than relative must be set before overlapping any image(which is present in the child)*/
+     z-index: -1;
+}
+#back{
+    transform: translateZ(-40px)scale(5);   
+}
+#fore{
+    transform: translateZ(-20px)scale(3);
+}
+
+#back, #fore{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    object-fit: cover;/*it is used to fit the image inside the container without streching the image */
+
+
+}
+h1{
+    color: white;
+    position: absolute;
+    top: 5rem;
+    left: 10%;
+    font-size:10rem;
+}
+section{
+    padding: 20px;
+    background-color: rgb(45,45,45);
+    color: white;
+}
+.pic1{
+    background-image: url(sports1.jpg);
+    background-size: cover;
+    position: relative;
+}
+.pic2{
+    background-image: url(sports2.jpg);
+position: relative;
+background-size: cover;
+}
+.pic3{
+    background-image: url(sports3.avif);
+position: relative;
+background-size: cover;
+}
+.bg{
+   position: relative;
+  
+   width: 100vw;
+   height: 500px;
+   text-align: center;
+   background-attachment: fixed;/*used to fix the image in the background so rest of the text floats over this*/
+}
+.head{
+    font-size: 5rem;
+    padding: 0 10rem;
+    text-align: center;
+}
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 3rem;
+}
+.pichead{
+    /* text-align: center; */
+    font-size: 3rem;
+    position:absolute;
+    background-color: rgb(45,45,45);
+    border-radius: 20px;
+    padding-left: 6px;
+    padding-right: 6px ;
+}
+
+.abc{
+  display: flex;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+}
